@@ -6,10 +6,12 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
 import khushboo.rohit.osmnavi.R;
 
@@ -18,14 +20,17 @@ public class ReportIssue extends AppCompatActivity implements AdapterView.OnItem
     // on below line we are creating variable for spinner.
     Spinner languageSpinner;
     // on below line we are creating a variable for our list of data to be displayed in spinner.
-    String[] languages = {"SELECT", "Battery Issue", "Orientation Issue", "CaneTip Issue", "Buzzer Issue", "Connecting with App Issue", "Others"};
+    String[] languages = {"SELECT"," Device not functioning properly","Stopped working","Not charging","Device got broken", "Cane got broken","Need support for training","Cane length not according to my height","Unable to connect with App","Unable to configure it with App"};
     Button Submit;
-
+    private EditText Others1;
+    //String msg ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.report_issue);
+        Others1 = findViewById(R.id.Others);
         Submit = findViewById(R.id.Submit);
+        //  String msg = Others.getText().toString();
         // on below line we are initializing spinner with ids.
         languageSpinner = (Spinner) findViewById(R.id.idLanguageSpinner);
 
@@ -55,41 +60,47 @@ public class ReportIssue extends AppCompatActivity implements AdapterView.OnItem
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         // on below line we are displaying toast message for selected item
         Toast.makeText(ReportIssue.this, "" + languages[position] + " Selected..", Toast.LENGTH_SHORT).show();
+
         String sel_spinner = languages[position];
 
 
-   // @Override
-    //public void onNothingSelected(AdapterView<?> adapterView) {
+        // @Override
+        //public void onNothingSelected(AdapterView<?> adapterView) {
 
-   // }
-    Submit.setOnClickListener(new View.OnClickListener()
+        // }
+        Submit.setOnClickListener(new View.OnClickListener()
 
-    {
-        @Override
-        public void onClick (View v){
-      // Intent i=new Intent(getApplicationContext(),NavigationActivity.class);
-      //  Log.d("SELECT", String.valueOf(i));
-       // i.putExtra("key",sel_spinner);
-       // startActivity(i);
+        {
+            //  private String msg;
 
 
-           Intent i = new Intent(Intent.ACTION_SEND);
-            i.setType("message/rfc822");
-          //  i.setData(Uri.parse("kumari.singh@gmail.com"));
-            i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"kumari.singh@gmail.com"});
-            i.putExtra(Intent.EXTRA_SUBJECT, "REPORT GRIEVANCE");
+            @Override
+            public void onClick (View v){
+                // Intent i=new Intent(getApplicationContext(),NavigationActivity.class);
+                //  Log.d("SELECT", String.valueOf(i));
+                // i.putExtra("key",sel_spinner);
+                // startActivity(i);
+                String msg =Others1.getText().toString();
+                // String msg = "";
+                String msgothers =sel_spinner +"\n"+ msg;
+                Intent i = new Intent(Intent.ACTION_SEND);
+                i.setType("message/rfc822");
+                //  i.setData(Uri.parse("kumari.singh@gmail.com"));
+                i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"kumari.singh@gmail.com"});
+                i.putExtra(Intent.EXTRA_SUBJECT, "REPORT GRIEVANCE");
 
-            i.putExtra(Intent.EXTRA_TEXT, sel_spinner);
-            startActivity(Intent.createChooser(i, "Choose an Email client :"));
+                i.putExtra(Intent.EXTRA_TEXT,msgothers);
+
+                startActivity(Intent.createChooser(i, "Choose an Email client :"));
 
 
-    }
-    });}
+            }
+        });}
 
-     @Override
+    @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
-     }
+    }
     public void goBackPressed(View view) {
         onBackPressed();
     }

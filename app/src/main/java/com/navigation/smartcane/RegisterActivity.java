@@ -1,6 +1,7 @@
 package com.navigation.smartcane;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -43,31 +44,53 @@ public class RegisterActivity<Editor> extends AppCompatActivity {
 
         // adding on click listener for our button.
         submitBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // inside on click we are checking if the entered data
-                // by user is empty or not.
+                                         @Override
+                                         public void onClick(View v) {
+                                             // inside on click we are checking if the entered data
+                                             // by user is empty or not.
 
-                String msg = messageEdt.getText().toString();
-                if (TextUtils.isEmpty(msg)) {
-                    // if the input is empty we are displaying a toast message.
-                    Toast.makeText(RegisterActivity.this, "Please enter your Name", Toast.LENGTH_SHORT).show();
-                }
-                String msg0 = messageEdt0.getText().toString();
-                if (TextUtils.isEmpty(msg0)) {
-                    // if the input is empty we are displaying a toast message.
-                    Toast.makeText(RegisterActivity.this, "Please enter your Serial Number", Toast.LENGTH_SHORT).show();
-                }
-                String msg1 = messageEdt1.getText().toString();
-                if (TextUtils.isEmpty(msg1)) {
-                    // if the input is empty we are displaying a toast message.
-                    Toast.makeText(RegisterActivity.this, "Please enter your Email Id", Toast.LENGTH_SHORT).show();
-                }
-                String msg2 = messageEdt2.getText().toString();
-                if (TextUtils.isEmpty(msg2)) {
-                    // if the input is empty we are displaying a toast message.
-                    Toast.makeText(RegisterActivity.this, "Please enter your Mobile Number", Toast.LENGTH_SHORT).show();}
-                else
+                                             String msg = messageEdt.getText().toString();
+                                             if (TextUtils.isEmpty(msg)) {
+                                                 // if the input is empty we are displaying a toast message.
+                                                 Toast.makeText(RegisterActivity.this, "Please enter your Name", Toast.LENGTH_SHORT).show();
+                                             }
+                                             String msg0 = messageEdt0.getText().toString();
+                                             if (TextUtils.isEmpty(msg0)) {
+                                                 // if the input is empty we are displaying a toast message.
+                                                 Toast.makeText(RegisterActivity.this, "Please enter your Serial Number", Toast.LENGTH_SHORT).show();
+                                             }
+                                             String msg1 = messageEdt1.getText().toString();
+                                             if (TextUtils.isEmpty(msg1)) {
+                                                 // if the input is empty we are displaying a toast message.
+                                                 Toast.makeText(RegisterActivity.this, "Please enter your Email Id", Toast.LENGTH_SHORT).show();
+                                             }
+                                             String msg2 = messageEdt2.getText().toString();
+                                             if (TextUtils.isEmpty(msg2)) {
+                                                 // if the input is empty we are displaying a toast message.
+                                                 Toast.makeText(RegisterActivity.this, "Please enter your Mobile Number", Toast.LENGTH_SHORT).show();}
+
+
+
+                                             // String msg = "";
+
+                                             Intent i = new Intent(Intent.ACTION_SEND);
+                                             i.setType("message/rfc822");
+                                             //  i.setData(Uri.parse("kumari.singh@gmail.com"));
+                                             i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"kumari.singh@gmail.com"});
+                                             i.putExtra(Intent.EXTRA_SUBJECT, "REGISTER");
+
+                                             i.putExtra(Intent.EXTRA_TEXT,"Name : "+msg+"\n"+"Serial Number : "+msg0+"\n"+"Email-Id : "+msg1+"\n"+"Mobile Number : "+msg2);
+
+                                             startActivity(Intent.createChooser(i, "Choose an Email client :"));
+
+
+                                         }
+
+
+
+
+
+             /*   else
                     {
                         // if the input is not empty we are calling a method to save
                         // data to shared prefs.
@@ -77,14 +100,14 @@ public class RegisterActivity<Editor> extends AppCompatActivity {
                         //SaveSharedPreference1();
 
 
-                }
-            }
-        });
+                }*/
+                                     }
+        );
 
 
     }
 
-    private void saveMessage(String msg) {
+   /* private void saveMessage(String msg) {
         SharedPreferences.Editor editor = sharedpreferences.edit();
         // below lines will put values for
         // message in shared preferences.
@@ -97,7 +120,7 @@ public class RegisterActivity<Editor> extends AppCompatActivity {
         //messageEdt0.setText("");
         Toast.makeText(RegisterActivity.this, "User Registered successfully", Toast.LENGTH_SHORT).show();
 
-    }
+    }*/
 
 
 

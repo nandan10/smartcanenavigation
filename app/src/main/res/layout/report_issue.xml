@@ -44,6 +44,31 @@
         android:layout_marginTop="80dp"
         android:contentDescription="select"
         android:padding="40dp" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:padding="10dp"
+
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        android:layout_gravity="center"
+        >
+
+        <EditText
+            android:id="@+id/Others"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Others"
+
+            />
+    </androidx.cardview.widget.CardView>
+
 
     <androidx.cardview.widget.CardView
         android:layout_width="250dp"
@@ -56,16 +81,17 @@
         app:cardCornerRadius="20dp"
         app:cardElevation="10dp"
         android:layout_gravity="center"
-       >
-    <Button
-        android:id="@+id/Submit"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="SUBMIT"
-        android:textColor="@color/black"
-        android:backgroundTint="#EBE2E2"
-        android:textSize="18dp"
-        android:contentDescription="submit"/>
+        >
+
+        <Button
+            android:id="@+id/Submit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="SUBMIT"
+            android:textColor="@color/black"
+            android:backgroundTint="#EBE2E2"
+            android:textSize="18dp"
+            android:contentDescription="submit"/>
     </androidx.cardview.widget.CardView>
 
 
