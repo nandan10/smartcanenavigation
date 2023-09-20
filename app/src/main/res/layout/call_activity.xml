@@ -19,7 +19,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="350dp"
-        android:layout_height="50dp"
+        android:layout_height="150dp"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="10dp"
         android:padding="10dp"
@@ -28,16 +28,24 @@
         app:cardElevation="10dp"
         android:layout_gravity="center">
 
-
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Please click back button to move to the Home Page"
-            android:textAlignment="center"
-            android:textSize="14dp"
-            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:text="You have called "
+            android:textSize="18dp"
             android:textColor="@color/white"
-            android:contentDescription="Please click back button to move to the Home Page"/>
+            android:contentDescription="You have called"/>
+        <TextView
+            android:id="@+id/Call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:hint="Called Number "
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:layout_gravity="center"/>
+
     </androidx.cardview.widget.CardView>
 </LinearLayout>
