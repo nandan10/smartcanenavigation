@@ -8,7 +8,7 @@
     android:layout_weight="1"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    tools:context="com.navigation.smartcane.MainActivity"
+    tools:context="khushboo.rohit.osmnavi.MainActivity"
     android:background="#000"
     >
     <RelativeLayout

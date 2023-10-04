@@ -51,7 +51,7 @@
 
 
     <application
-        android:name="com.navigation.smartcane.MyApp"
+        android:name="khushboo.rohit.osmnavi.MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -59,23 +59,23 @@
         android:theme="@style/AppTheme">
 
 
-        <activity android:name="com.navigation.smartcane.MainActivity" />
-        <activity android:name="com.navigation.smartcane.AddButton" />
-        <activity android:name="com.navigation.smartcane.AddTags" />
-        <activity android:name="com.navigation.smartcane.Debug" />
-        <activity android:name="com.navigation.smartcane.debugAcitivity" />
-        <activity android:name="com.navigation.smartcane.image_recognition" />
-        <activity android:name="com.navigation.smartcane.shareLocActivity" />
-        <activity android:name="com.navigation.smartcane.ModifyRoute" />
-        <activity android:name="com.navigation.smartcane.MyApp" />
-        <activity android:name="com.navigation.smartcane.POIList" />
-        <activity android:name="com.navigation.smartcane.SearchPOI" />
-        <activity android:name="com.navigation.smartcane.SuggestRoute" />
-        <activity android:name="com.navigation.smartcane.ResultActivity" />
-        <activity android:name="com.navigation.smartcane.ResultActivity1" />
-        <activity android:name="com.navigation.smartcane.ShowRoutes" />
-        <activity android:name="com.navigation.smartcane.SaveRoute" />
-        <activity android:name="com.navigation.smartcane.ShowDb" />
+        <activity android:name="khushboo.rohit.osmnavi.MainActivity" />
+        <activity android:name="khushboo.rohit.osmnavi.AddButton" />
+        <activity android:name="khushboo.rohit.osmnavi.AddTags" />
+        <activity android:name="khushboo.rohit.osmnavi.Debug" />
+        <activity android:name="khushboo.rohit.osmnavi.debugAcitivity" />
+        <activity android:name="khushboo.rohit.osmnavi.image_recognition" />
+        <activity android:name="khushboo.rohit.osmnavi.shareLocActivity" />
+        <activity android:name="khushboo.rohit.osmnavi.ModifyRoute" />
+        <activity android:name="khushboo.rohit.osmnavi.MyApp" />
+        <activity android:name="khushboo.rohit.osmnavi.POIList" />
+        <activity android:name="khushboo.rohit.osmnavi.SearchPOI" />
+        <activity android:name="khushboo.rohit.osmnavi.SuggestRoute" />
+        <activity android:name="khushboo.rohit.osmnavi.ResultActivity" />
+        <activity android:name="khushboo.rohit.osmnavi.ResultActivity1" />
+        <activity android:name="khushboo.rohit.osmnavi.ShowRoutes" />
+        <activity android:name="khushboo.rohit.osmnavi.SaveRoute" />
+        <activity android:name="khushboo.rohit.osmnavi.ShowDb" />
 
 
 
@@ -83,95 +83,95 @@
 
 
 
-        <activity android:name="com.navigation.smartcane.NavigationActivity" />
+        <activity android:name="khushboo.rohit.osmnavi.NavigationActivity" />
 
 
 
         <activity
-            android:name="com.navigation.smartcane.DebugActivity"
+            android:name="khushboo.rohit.osmnavi.DebugActivity"
            />
         <activity
-            android:name="com.navigation.smartcane.NavigationActivity1"
+            android:name="khushboo.rohit.osmnavi.NavigationActivity1"
            />
         <activity
-            android:name="com.navigation.smartcane.TrainingActivity"
+            android:name="khushboo.rohit.osmnavi.TrainingActivity"
             />
         <activity
-            android:name="com.navigation.smartcane.ProfilesActivity"
+            android:name="khushboo.rohit.osmnavi.ProfilesActivity"
             />
 
         <activity
-            android:name="com.navigation.smartcane.ProfileToCustomizeActivity"
+            android:name="khushboo.rohit.osmnavi.ProfileToCustomizeActivity"
             />
         <activity
-            android:name="com.navigation.smartcane.ProfileCustomizeActivity"
+            android:name="khushboo.rohit.osmnavi.ProfileCustomizeActivity"
             />
         <activity
-            android:name="com.navigation.smartcane.EmergencyMainActivity"
+            android:name="khushboo.rohit.osmnavi.EmergencyMainActivity"
              />
         <activity
-            android:name="com.navigation.smartcane.EmergencyCall"
+            android:name="khushboo.rohit.osmnavi.EmergencyCall"
             />
         <activity
-            android:name="com.navigation.smartcane.EmergencySms"
+            android:name="khushboo.rohit.osmnavi.EmergencySms"
             />
         <activity
-            android:name="com.navigation.smartcane.Location"
+            android:name="khushboo.rohit.osmnavi.Location"
              />
         <activity
-            android:name="com.navigation.smartcane.RegisterActivity"
+            android:name="khushboo.rohit.osmnavi.RegisterActivity"
            />
         <activity
-            android:name="com.navigation.smartcane.ReportIssue"
+            android:name="khushboo.rohit.osmnavi.ReportIssue"
              />
         <activity
-            android:name="com.navigation.smartcane.IntensityActivity"
+            android:name="khushboo.rohit.osmnavi.IntensityActivity"
             />
         <activity
-            android:name="com.navigation.smartcane.SettingsActivity"
+            android:name="khushboo.rohit.osmnavi.SettingsActivity"
             />
         <activity
-            android:name="com.navigation.smartcane.PermissionActivity"
+            android:name="khushboo.rohit.osmnavi.PermissionActivity"
             />
 
 
         <activity
-            android:name="com.navigation.smartcane.BatteryActivity"
+            android:name="khushboo.rohit.osmnavi.BatteryActivity"
             />
 
         <activity
-            android:name="com.navigation.smartcane.GetSupport"
+            android:name="khushboo.rohit.osmnavi.GetSupport"
             />
         <activity
-            android:name="com.navigation.smartcane.DiariesActivity"
+            android:name="khushboo.rohit.osmnavi.DiariesActivity"
              />
         <activity
-            android:name="com.navigation.smartcane.Training"
+            android:name="khushboo.rohit.osmnavi.Training"
             />
         <activity
-            android:name="com.navigation.smartcane.GuideActivity"
+            android:name="khushboo.rohit.osmnavi.GuideActivity"
             />
         <activity
-            android:name="com.navigation.smartcane.Book"
+            android:name="khushboo.rohit.osmnavi.Book"
              />
         <activity
-            android:name="com.navigation.smartcane.CoursesActivity"
+            android:name="khushboo.rohit.osmnavi.CoursesActivity"
              />
 
 
         <!-- register the service -->
         <service
-            android:name="com.navigation.smartcane.SensorService"
+            android:name="khushboo.rohit.osmnavi.SensorService"
             android:enabled="true"
             android:exported="true" />
 
 
 
         <activity
-            android:name="com.navigation.smartcane.MainActivity1"
+            android:name="khushboo.rohit.osmnavi.MainActivity1"
             />
         <activity
-            android:name="com.navigation.smartcane.LandingPage"
+            android:name="khushboo.rohit.osmnavi.LandingPage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -180,7 +180,7 @@
             </intent-filter>
         </activity>
         <receiver
-            android:name="com.navigation.smartcane.ReactivateService"
+            android:name="khushboo.rohit.osmnavi.ReactivateService"
             />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -189,7 +189,7 @@
     android:name="com.google.android.gms.version"
     android:value="@integer/google_play_services_version"/>
 
-        <activity android:name="com.navigation.smartcane.pathReview" />
+        <activity android:name="khushboo.rohit.osmnavi.pathReview" />
 
 
     </application>

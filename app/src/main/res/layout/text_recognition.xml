@@ -7,7 +7,7 @@
     android:paddingTop="16dp"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    tools:context="com.navigation.smartcane.image_recognition"
+    tools:context="khushboo.rohit.osmnavi.image_recognition"
     >
     <RelativeLayout
         android:id="@+id/relative"

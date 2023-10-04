@@ -10,7 +10,7 @@
     android:paddingRight="16dp"
     android:paddingBottom="16dp"
     android:textAlignment="textStart"
-    tools:context="com.navigation.smartcane.MainActivity1">
+    tools:context="khushboo.rohit.osmnavi.MainActivity1">
 
 
     <LinearLayout
